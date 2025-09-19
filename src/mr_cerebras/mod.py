@@ -39,10 +39,10 @@ async def stream_chat(model, messages=[], context=None, num_ctx=200000,
         # if the role of both of them is the same
         # this is not valid
         # so we need to remove the last message
-        last_role = messages[-1]['role']
-        second_last_role = messages[-2]['role']
-        if last_role == second_last_role:
-            messages = messages[:-1]
+        #last_role = messages[-1]['role']
+        #second_last_role = messages[-2]['role']
+        #if last_role == second_last_role:
+        #    messages = messages[:-1]
 
         messages = [concat_text_lists(m) for m in messages]
 
