@@ -28,10 +28,10 @@ def concat_text_lists(message):
 
 @service()
 async def stream_chat(model, messages=[], context=None, num_ctx=200000, 
-                     temperature=0.0, max_tokens=150, num_gpu_layers=0):
+                     temperature=0.0, max_tokens=500, num_gpu_layers=0):
     try:
         print("Cerebras stream_chat (OpenAI compatible mode)")
-        max_tokens = 120
+        #max_tokens = 120
         model_name = os.environ.get("AH_OVERRIDE_LLM_MODEL", "llama3.1-8b")
         if model:
             model_name = model
