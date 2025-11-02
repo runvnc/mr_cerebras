@@ -67,6 +67,7 @@ async def stream_chat(model, messages=[], context=None, num_ctx=200000,
                     print(f"Cerebras backoff: waiting {wait_time:.2f}s before attempt {attempt + 1}")
                     await asyncio.sleep(wait_time)
 
+
                 stream = await client.chat.completions.create(
                     model=model_name,
                     messages=messages,
